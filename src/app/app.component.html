@@ -2,7 +2,7 @@
 
 	<div class='title'>ngRx Redux</div>
 
-	<div *ngIf="post | async as p" class="post-container">
+	<div *ngIf="post$ | async as p" class="post-container">
 		<div class="post">{{p.text}}</div>
 		<div class='votes'>
 			Votes: <span>{{p.likes}}</span>

@@ -16,12 +16,12 @@ interface AppState {
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  post: Observable<Post>;
+  post$: Observable<Post>;
 
   text: string; //form input
 
   constructor(private store: Store<AppState>) {
-    this.post = this.store.select("post");
+    this.post$ = this.store.select("post");
   }
 
   editText() {
