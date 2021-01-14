@@ -38,5 +38,6 @@ export class AppComponent {
 
   reset() {
     this.store.dispatch(new PostActions.Reset());
+    this.text = "";
   }
 }
