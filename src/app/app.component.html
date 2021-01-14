@@ -1,0 +1,23 @@
+<div class='container'>
+
+	<div class='title'>ngRx Redux</div>
+
+	<div *ngIf="post | async as p" class="post-container">
+		<div class="post">{{p.text}}</div>
+		<div class='votes'>
+			Votes: <span>{{p.likes}}</span>
+		</div>
+	</div>
+
+	<div class='buttons'>
+		<button class='upvote' (click)="upvote()">Upvote</button>
+		<button class='downvote' (click)="downvote()">Downvote</button>
+		<button class='reset' (click)="reset()">Reset</button>
+	</div>
+
+	<div class='input-area'>
+		<input [(ngModel)]="text" type="text">
+		<button class='change-title' (click)="editText()">Change title</button>
+	</div>
+
+</div>
